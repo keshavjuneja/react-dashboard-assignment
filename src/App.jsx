@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Menu, Search, User } from 'lucide-react';
 
-// Mock data
 const projectStats = {
   total: 10,
   incoming: 0,
@@ -39,7 +38,6 @@ const employeeData = {
   }
 };
 
-// Donut Chart Component
 const DonutChart = ({ data, colors }) => {
   const entries = Object.entries(data).filter(([_, value]) => value > 0);
   const total = entries.reduce((sum, [_, value]) => sum + value, 0);
@@ -62,7 +60,6 @@ const DonutChart = ({ data, colors }) => {
     const startAngle = cumulativePercent * 360;
     const endAngle = (cumulativePercent + percent) * 360;
     
-    // For a full circle (100%), we need to draw it differently
     if (percent >= 0.9999) {
       paths.push({
         d: `M 50 20 A 30 30 0 1 1 49.99 20`,
@@ -103,7 +100,6 @@ const DonutChart = ({ data, colors }) => {
   );
 };
 
-// Legend Component
 const Legend = ({ data, colors, labels }) => {
   return (
     <div className="grid grid-cols-2 gap-x-2 gap-y-1 text-xs mt-2">
@@ -157,7 +153,6 @@ export default function Dashboard() {
 
   return (
     <div className="h-screen bg-gray-50 flex flex-col">
-      {/* Header */}
       <header className="bg-white border-b border-gray-200 px-4 py-2 flex-shrink-0">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
@@ -199,10 +194,8 @@ export default function Dashboard() {
         </div>
       </header>
 
-      {/* Main Content - No Scroll */}
       <main className="flex-1 p-3 overflow-hidden">
         <div className="h-full flex flex-col max-w-7xl mx-auto">
-          {/* Welcome Section */}
           <div className="bg-white rounded-lg p-3 mb-3 flex items-center justify-between flex-shrink-0">
             <div>
               <h1 className="text-lg font-semibold text-gray-800 mb-0.5">
@@ -220,7 +213,6 @@ export default function Dashboard() {
             </div>
           </div>
 
-          {/* Stats Grid */}
           <div className="grid grid-cols-6 gap-2 mb-3 flex-shrink-0">
             <div className="bg-white rounded-lg p-2">
               <div className="flex items-center justify-between">
@@ -278,9 +270,7 @@ export default function Dashboard() {
             </div>
           </div>
 
-          {/* Charts Grid - Takes remaining space */}
           <div className="grid grid-cols-3 gap-3 flex-1 min-h-0">
-            {/* Client Chart */}
             <div className="bg-white rounded-lg p-3 flex flex-col">
               <h3 className="text-sm font-semibold mb-2">Client</h3>
               <div className="mb-2">
@@ -299,7 +289,6 @@ export default function Dashboard() {
               </div>
             </div>
 
-            {/* Project Chart */}
             <div className="bg-white rounded-lg p-3 flex flex-col">
               <h3 className="text-sm font-semibold mb-2">Project</h3>
               <div className="mb-2">
@@ -320,7 +309,6 @@ export default function Dashboard() {
               </div>
             </div>
 
-            {/* Employee Chart */}
             <div className="bg-white rounded-lg p-3 flex flex-col">
               <h3 className="text-sm font-semibold mb-2">Employee</h3>
               <div className="grid grid-cols-2 gap-1 mb-2">

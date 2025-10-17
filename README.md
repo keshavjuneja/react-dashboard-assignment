@@ -1,70 +1,96 @@
-# Getting Started with Create React App
+# React Dashboard Assignment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A responsive dashboard application built with React.js that displays project statistics and data visualization through donut charts.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Interactive donut charts showing data distribution
+- Real-time statistics display
+- Dropdown filters for data selection
+- Responsive design
+- Clean user interface
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React.js
+- Tailwind CSS
+- Lucide React for icons
+- JavaScript ES6+
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Prerequisites
 
-### `npm test`
+- Node.js (version 14 or higher)
+- npm or yarn package manager
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation Steps
 
-### `npm run build`
+Clone the repository:
+```bash
+git clone https://github.com/keshavjuneja/react-dashboard-assignment.git
+cd react-dashboard-assignment
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Install dependencies:
+```bash
+npm install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Start the development server:
+```bash
+npm start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The application will open at http://localhost:3000
 
-### `npm run eject`
+## Project Structure
+```
+src/
+├── App.jsx          - Main dashboard component
+├── index.js         - Application entry point
+├── index.css        - Tailwind CSS configuration
+└── ...
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Dashboard Sections
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Client Section**
+Displays client project status with categories: Complete, In Progress, Overdue, Incoming, and Next Follow Up.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+**Project Section**
+Shows project-specific statistics including Completed, In Progress, Overdue, Paid, and Next Follow Up status.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+**Employee Section**
+Tracks employee performance with project and employee filters.
 
-## Learn More
+**Statistics Cards**
+Six cards showing Total Projects, Incoming, Completed, Overdue, In Progress, and Next Follow Up counts.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Build for Production
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Create production build:
+```bash
+npm run build
+```
 
-### Code Splitting
+## Troubleshooting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+If you encounter module errors, run:
+```bash
+npm install
+```
 
-### Analyzing the Bundle Size
+If port 3000 is in use, specify a different port:
+```bash
+PORT=3001 npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Author
 
-### Making a Progressive Web App
+Keshav Juneja
+Email: keshavjuneja37@gmail.com
+GitHub: github.com/keshavjuneja
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Assignment Details
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Submitted for CoreTeams React Intern Position
+Submission Date: October 16, 2024
